@@ -175,7 +175,7 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-semibold text-forest-green mb-1">Località</h4>
                   <p className="text-stone-gray">
-                    Courmayeur, Valle d'Aosta
+                    Courmayeur, Valle d&apos;Aosta
                   </p>
                 </div>
               </div>

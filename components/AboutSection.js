@@ -41,12 +41,12 @@ export default function AboutSection() {
             </h2>
             <div className="space-y-4 text-stone-gray text-lg leading-relaxed">
               <p>
-                Sono un professionista dell'accoglienza con anni di esperienza nel 
+                Sono un professionista dell&apos;accoglienza con anni di esperienza nel 
                 settore alberghiero e della ristorazione a Courmayeur, una delle 
-                località alpine più prestigiose d'Italia.
+                località alpine più prestigiose d&apos;Italia.
               </p>
               <p>
-                La mia passione per le montagne e per l'ospitalità mi ha portato 
+                La mia passione per le montagne e per l&apos;ospitalità mi ha portato 
                 a creare servizi esclusivi per chi desidera vivere esperienze 
                 autentiche e indimenticabili ai piedi del Monte Bianco.
               </p>
@@ -59,7 +59,7 @@ export default function AboutSection() {
             <div className="mt-8 flex items-center space-x-4">
               <div className="h-1 w-20 bg-soft-gold" />
               <p className="text-forest-green font-semibold italic">
-                "Trasformo ogni viaggio in un'esperienza indimenticabile"
+                &quot;Trasformo ogni viaggio in un&apos;esperienza indimenticabile&quot;
               </p>
             </div>
           </motion.div>

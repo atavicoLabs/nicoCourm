@@ -60,7 +60,7 @@ export default function Footer() {
             <ul className="space-y-2 text-white/80">
               <li>📧 info@courmayeur-services.com</li>
               <li>📱 +39 340 123 4567</li>
-              <li>📍 Courmayeur, Valle d'Aosta</li>
+              <li>📍 Courmayeur, Valle d&apos;Aosta</li>
             </ul>
             
             {/* Social Icons */}
