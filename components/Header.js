@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -69,30 +68,24 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden mt-4 bg-white rounded-lg shadow-xl overflow-hidden"
-            >
-              <div className="py-4 space-y-2">
-                {menuItems.map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => scrollToSection(item.id)}
-                    className="block w-full text-left px-6 py-3 text-forest-green 
-                             hover:bg-soft-gold/10 transition-colors font-semibold"
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {/* Mobile Menu - simpler CSS transition to avoid animation issues on some devices */}
+        <div
+          className={`md:hidden mt-4 bg-white rounded-lg shadow-xl overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
+            isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className={`py-4 space-y-2 ${isMobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+            {menuItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="block w-full text-left px-6 py-3 text-forest-green hover:bg-soft-gold/10 transition-colors font-semibold"
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </div>
       </nav>
     </header>
   )
