@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function HeroSection() {
   const scrollToSection = (id) => {
@@ -11,8 +12,20 @@ export default function HeroSection() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image/Video Placeholder */}
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-br from-forest-green/80 to-stone-gray/60" />
-        {/* Placeholder per immagine di sfondo di Courmayeur */}
+        {/* Background image: put your file at /public/images/courmayeur.png or use an external URL */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/courmayeur.png"
+            alt="Courmayeur"
+            fill
+            priority
+            quality={80}
+            className="object-cover"
+            style={{ objectPosition: 'center top' }}
+          />
+        </div>
+
+        {/* Overlay per contrasto */}
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
