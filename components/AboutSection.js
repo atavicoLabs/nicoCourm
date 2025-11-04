@@ -26,7 +26,8 @@ export default function AboutSection() {
                 Foto profilo
               </div>
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-soft-gold/20 
+            {/* Elemento decorativo nascosto su mobile per evitare overflow */}
+            <div className="hidden md:block absolute md:-bottom-6 md:-right-6 w-32 h-32 bg-soft-gold/20 
                           rounded-lg -z-10" />
           </motion.div>
 

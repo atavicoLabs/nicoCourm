@@ -6,12 +6,28 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
   @apply font-inter text-gray-900 bg-snow-white;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
   @apply font-playfair;
+}
+
+/* Prevent horizontal overflow on all screen sizes */
+* {
+  max-width: 100%;
+}
+
+#__next,
+main {
+  overflow-x: hidden;
+  width: 100%;
 }
