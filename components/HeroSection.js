@@ -46,7 +46,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl md:text-2xl mb-8 font-light"
         >
-          scopri courmayeur come non l'avevi mai vista prima
+          scopri courmayeur come non l&apos;avevi mai vista prima
         </motion.p>
         
         <motion.button
