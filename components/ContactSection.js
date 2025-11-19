@@ -29,8 +29,8 @@ export default function ContactSection() {
     })
   }
 
-  const whatsappNumber = '393401234567' // Placeholder
-  const whatsappMessage = encodeURIComponent('Ciao! Vorrei avere informazioni sui tuoi servizi a Courmayeur.')
+  const whatsappNumber = '393343180579'
+  const whatsappMessage = encodeURIComponent('Ciao! Vorrei avere informazioni sui servizi a Courmayeur.')
 
   return (
     <section id="contatti" className="py-20 px-4 bg-gradient-to-b from-snow-white to-white" ref={ref}>
@@ -152,9 +152,9 @@ export default function ContactSection() {
                 <span className="text-2xl">📧</span>
                 <div>
                   <h4 className="font-semibold text-forest-green mb-1">Email</h4>
-                  <a href="mailto:info@courmayeur-services.com" 
+                  <a href="mailto:nicola.pierantognetti99@gmail.com" 
                      className="text-stone-gray hover:text-soft-gold transition-colors">
-                    info@courmayeur-services.com
+                    nicola.pierantognetti99@gmail.com
                   </a>
                 </div>
               </div>
@@ -163,9 +163,9 @@ export default function ContactSection() {
                 <span className="text-2xl">📱</span>
                 <div>
                   <h4 className="font-semibold text-forest-green mb-1">Telefono</h4>
-                  <a href="tel:+393401234567" 
+                  <a href="tel:+393343180579" 
                      className="text-stone-gray hover:text-soft-gold transition-colors">
-                    +39 340 123 4567
+                    +39 334 318 0579
                   </a>
                 </div>
               </div>

@@ -8,11 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'snow-white': '#FAFAFA',
-        'stone-gray': '#6B7280',
-        'forest-green': '#064E3B',
-        'wood-beige': '#D4C5B9',
-        'soft-gold': '#D4AF37',
+        // Palette premium, invernale e naturale
+        'snow-white': '#F7F6F4', // soft snow
+        'stone-gray': '#7B7B7B', // elegant stone
+        'forest-green': '#103D2E', // deep forest
+        'wood-beige': '#C9B79A', // warm wood/beige
+        'soft-gold': '#BFA061', // muted soft gold
+        'charcoal': '#111827', // dark text
+        'cream': '#FBF8F3',
       },
       fontFamily: {
         'playfair': ['Playfair Display', 'serif'],

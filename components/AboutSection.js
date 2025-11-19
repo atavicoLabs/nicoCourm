@@ -52,15 +52,15 @@ export default function AboutSection() {
                 autentiche e indimenticabili ai piedi del Monte Bianco.
               </p>
               <p>
-                Conosco ogni angolo di questa meravigliosa valle e sono qui per 
-                rendere il vostro soggiorno unico, combinando comfort, eleganza 
-                e la genuina ospitalità valdostana.
+                Conosco ogni angolo di questa meravigliosa valle e sono qui per
+                rendere il vostro soggiorno unico, combinando comfort, eleganza
+                e la genuina ospitalità.
               </p>
             </div>
             <div className="mt-8 flex items-center space-x-4">
               <div className="h-1 w-20 bg-soft-gold" />
               <p className="text-forest-green font-semibold italic">
-                &quot;Trasformo ogni viaggio in un&apos;esperienza indimenticabile&quot;
+                &quot;La vita é un viaggio e chi viaggia vive due volte&quot;
               </p>
             </div>
           </motion.div>

@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Servizi di Accoglienza Courmayeur | Autista Privato & Guida Turistica',
-  description: 'Servizi premium di accoglienza a Courmayeur: autista privato, guida turistica locale e aperitivi in quota. Esperienze autentiche nelle Alpi.',
+  title: 'Your personal courma guide | Courmayeur Services',
+  description: 'Your personal courma guide — scopri Courmayeur: autista privato, Courma Infopoint, aperitrekking in quota e attività sportive. Esperienze su misura nelle Alpi.',
 }
 
 export default function RootLayout({ children }) {

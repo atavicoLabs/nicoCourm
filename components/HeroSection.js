@@ -37,7 +37,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
         >
-          Esperienze Autentiche a Courmayeur
+          Your personal courma guide
         </motion.h1>
         
         <motion.p
@@ -46,8 +46,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl md:text-2xl mb-8 font-light"
         >
-          Servizi premium di accoglienza nelle Alpi: autista privato, 
-          guida turistica e aperitivi in quota
+          scopri courmayeur come non l'avevi mai vista prima
         </motion.p>
         
         <motion.button

@@ -7,21 +7,27 @@ import { useRef } from 'react'
 const services = [
   {
     title: 'Autista Privato',
-    description: 'Trasferimenti comodi e sicuri da/per aeroporti, stazioni e località turistiche. Viaggia in totale relax con un servizio personalizzato e puntuale.',
+    description: 'Servizio professionale di autista privato su misura: trasferimenti aeroportuali e ferroviari, pick-up e drop-off, escursioni e percorsi personalizzati. Veicoli di categoria premium, autisti locali qualificati, assistenza bagagli e massima riservatezza. Puntualità, sicurezza e itinerari studiati per il massimo comfort durante tutto il viaggio.',
     icon: '🚗',
-    features: ['Trasferimenti aeroportuali', 'Tour personalizzati', 'Veicoli premium', 'Disponibilità 24/7']
+    features: ['Trasferimenti aeroportuali e stazioni', 'Itinerari personalizzati', 'Veicoli premium', 'Autisti locali qualificati']
   },
   {
-    title: 'Aperitivi in Quota',
-    description: 'Goditi aperitivi esclusivi con vista mozzafiato sul Monte Bianco. Esperienza culinaria unica tra le vette, con prodotti locali selezionati.',
-    icon: '🏔️',
-    features: ['Location esclusive', 'Prodotti valdostani', 'Vista panoramica', 'Organizzazione completa']
+    title: 'Aperitrekking in Quota',
+    description: 'Scegli il tuo mezzo tra mountain bike, e-bike o classico trekking e goditi aperitivi in quota: degustazioni di prodotti locali al tramonto, accompagnamento di guide esperte e logistica completa per un’esperienza sicura e indimenticabile.',
+    icon: '🚵‍♀️',
+    features: ['Scelta mezzo: mtb / e-bike / trekking', 'Degustazioni locali', 'Guide alpine', 'Logistica e sicurezza']
   },
   {
-    title: 'Guida Turistica',
-    description: 'Scopri i tesori nascosti di Courmayeur e della Valle d\'Aosta con un esperto locale. Itinerari su misura tra storia, natura e tradizioni.',
-    icon: '🧭',
-    features: ['Tour personalizzati', 'Conoscenza locale', 'Lingue multiple', 'Esperienze autentiche']
+    title: 'Courma Infopoint',
+    description: 'Scopri tutte le attività di Courmayeur, dal relax dei centri termali alle avventure in natura. Informazioni pratiche, suggerimenti su itinerari e eventi, e un PDF riassuntivo scaricabile con tutto quello che serve per organizzare al meglio la tua visita.',
+    icon: '🗺️',
+    features: ['Informazioni su attività e servizi', 'Suggerimenti su itinerari', 'Eventi e wellness', 'PDF informativo scaricabile']
+  },
+  {
+    title: 'Courma Active',
+    description: 'Attività sportive su misura: arrampicata, canyoning, mountain bike, sci e corsi per tutti i livelli. Proponiamo pacchetti dinamici per chi ama l’avventura e lo sport in montagna.',
+    icon: '⛷️',
+    features: ['Sport per tutti i livelli', 'Attrezzatura e guide', 'Pacchetti giornalieri', 'Sicurezza certificata']
   }
 ]
 
@@ -46,7 +52,7 @@ export default function ServicesSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -54,7 +60,7 @@ export default function ServicesSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl 
-                       transition-all duration-300 hover:-translate-y-2 group"
+                         transition-all duration-300 hover:-translate-y-2 group flex flex-col h-full"
             >
               {/* Icon/Image Area */}
               <div className="h-48 bg-gradient-to-br from-forest-green to-stone-gray 
@@ -64,7 +70,7 @@ export default function ServicesSection() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-2xl font-bold text-forest-green mb-3">
                   {service.title}
                 </h3>
@@ -83,11 +89,23 @@ export default function ServicesSection() {
                 </ul>
 
                 {/* CTA */}
-                <button className="mt-6 w-full bg-forest-green text-white py-3 rounded-lg 
+                {service.title === 'Courma Infopoint' ? (
+                  <a
+                    href="/courma-infopoint.pdf"
+                    download
+                    className="mt-auto inline-block w-full text-center bg-forest-green text-white py-3 rounded-lg 
                                  hover:bg-forest-green/90 transition-colors duration-300 
-                                 font-semibold">
-                  Scopri di più
-                </button>
+                                 font-semibold"
+                  >
+                    Scarica il PDF informativo
+                  </a>
+                ) : (
+                  <button className="mt-auto w-full bg-forest-green text-white py-3 rounded-lg 
+                                   hover:bg-forest-green/90 transition-colors duration-300 
+                                   font-semibold">
+                    Scopri di più
+                  </button>
+                )}
               </div>
             </motion.div>
           ))}

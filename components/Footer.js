@@ -3,6 +3,10 @@
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
+  const scrollToTop = () => {
+    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <footer className="bg-forest-green text-white py-12 px-4">
       <div className="max-w-6xl mx-auto">
@@ -58,16 +62,16 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contatti</h4>
             <ul className="space-y-2 text-white/80">
-              <li>📧 info@courmayeur-services.com</li>
-              <li>📱 +39 340 123 4567</li>
+              <li>📧 nicola.pierantognetti99@gmail.com</li>
+              <li>📱 +39 334 318 0579</li>
               <li>📍 Courmayeur, Valle d&apos;Aosta</li>
             </ul>
             
             {/* Social Icons */}
             <div className="flex space-x-4 mt-4">
-              <a href="#" className="text-2xl hover:text-soft-gold transition-colors">📘</a>
-              <a href="#" className="text-2xl hover:text-soft-gold transition-colors">📷</a>
-              <a href="#" className="text-2xl hover:text-soft-gold transition-colors">🔗</a>
+              <button onClick={scrollToTop} className="text-2xl hover:text-soft-gold transition-colors">📷</button>
+              <button onClick={scrollToTop} className="text-2xl hover:text-soft-gold transition-colors">📎</button>
+              <button onClick={scrollToTop} className="text-2xl hover:text-soft-gold transition-colors">📚</button>
             </div>
           </div>
         </div>
@@ -76,7 +80,7 @@ export default function Footer() {
         <div className="border-t border-white/20 pt-8 text-center text-white/60">
           <p>© {currentYear} Courmayeur Services. Tutti i diritti riservati.</p>
           <p className="mt-2 text-sm">
-            Realizzato con passione per le Alpi
+            realizzato con passione per te
           </p>
         </div>
       </div>
